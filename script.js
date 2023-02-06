@@ -40,15 +40,17 @@ class Calculator {
 			case "+":
 				computation = prev + current;
 				break;
-			case "-":
-				computation = prev - current;
-				break;
 			case "X":
 				computation = prev * current;
 				break;
 			case "÷":
 				computation = prev / current;
 				break;
+			case "-":
+				computation = prev - current;
+			// case "%":
+			// 	computation = prev / 100;
+			// 	break;
 			default:
 				return;
 		}
@@ -95,6 +97,7 @@ const operationButtons = document.querySelectorAll("[data-operation]");
 const equalsButton = document.querySelector("[data-equals]");
 const deleteButton = document.querySelector("[data-delete]");
 const allClearButton = document.querySelector("[data-all-clear]");
+
 const previousOperandTextElement = document.querySelector(
 	"[data-previous-operand]"
 );
@@ -135,3 +138,16 @@ deleteButton.addEventListener("click", (button) => {
 	calculator.delete();
 	calculator.updateDisplay();
 });
+
+const modulus = document.getElementById("module");
+function calModule() {
+	modulus.addEventListener('click', calModule)
+
+	
+	
+
+	
+       
+      
+	console.log(modulus);
+}
